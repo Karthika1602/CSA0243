@@ -1,0 +1,21 @@
+include<stdio.h>
+main()
+{
+        char ch[150];
+        int i,c=0,c1=0,c2=0;
+        printf("Enter a Paragraph \n");
+        gets(ch);
+        for(i=0;ch[i]!='\0';i++)
+        {
+                if(ch[i]=='.'||ch[i]=='!'||ch[i]=='?')
+                {       c++;
+                        c1++;
+                }
+                else if(ch[i]==' '||ch[i]==',')
+                        c1++;
+                else if(ch[i]>65&&ch[i]<123)
+                        c2++;
+        }
+        printf("\nNumber of letters = %d \nNumber of words=%d ",c2,c1);
+        printf("\nNumber of Sentences = %d\n",c);
+}
